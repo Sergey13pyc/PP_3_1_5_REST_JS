@@ -18,8 +18,6 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
-    @Pattern(regexp = "[A-Za-zа-яёА-ЯЁ]{2,15}", message = "Name should be between 2 and 15 characters without space")
-    private String name;
 
     @Pattern(regexp = "[A-Za-zа-яёА-ЯЁ]{2,15}", message = "Surname should be between 2 and 15 characters without space")
     private String surname;
@@ -51,8 +49,8 @@ public class User implements UserDetails {
     public User() {
     }
 
-    public User(String name, String surname, byte age, String email, String username, String password, Set<Role> roles) {
-        this.name = name;
+    public User(String surname, byte age, String email, String username, String password, Set<Role> roles) {
+
         this.surname = surname;
         this.age = age;
         this.email = email;
@@ -75,14 +73,6 @@ public class User implements UserDetails {
 
     public void setUserId(Long userId) {
         this.userId = userId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getSurname() {
