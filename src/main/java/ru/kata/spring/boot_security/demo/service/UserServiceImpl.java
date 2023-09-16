@@ -58,6 +58,15 @@ public class UserServiceImpl implements UserService {
     public void update(User user) {
         userRepository.save(user);
     }
+public void saveOrUpdate(long id, User user) {
+    String oldPassword = userRepository.getById(id).getPassword();
+    if (oldPassword.equals(user.getPassword())) {
+        user.setPassword(oldPassword);
+        userRepository.save(user);
+    } else {
+        userRepository.save(user);
+    }
+}
 
     @Override
     public void deleteById(long id) {
