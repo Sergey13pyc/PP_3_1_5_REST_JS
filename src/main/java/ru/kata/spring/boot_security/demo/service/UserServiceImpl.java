@@ -88,10 +88,10 @@ public void saveOrUpdate(long id, User user) {
         User user2 = new User( "user", (byte) 25, "user@gmail.com", "user", "user", roles1);
         User user3 = new User( "user2", (byte) 44, "user2@gmail.com", "user2", "user", roles1);
         User user4 = new User( "user3", (byte) 36, "user3@gmail.com", "user3", "user", roles1);
-        userRepository.save(user1);
-        userRepository.save(user2);
-        userRepository.save(user3);
-        userRepository.save(user4);
+        save(user1);
+        save(user2);
+        save(user3);
+        save(user4);
     }
 }
 
