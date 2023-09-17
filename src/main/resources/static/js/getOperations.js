@@ -16,21 +16,21 @@ async function getUser() {
             `;
             table.innerHTML = temp;
 
-            $(function (){
+            $(function () {
                 let role = ""
-            for (let i = 0; i < user.roles.length; i++) {
-                role = user.roles[i].role
-                if (role === "ROLE_ADMIN") {
-                    isUser = false;
+                for (let i = 0; i < user.roles.length; i++) {
+                    role = user.roles[i].role
+                    if (role === "ROLE_ADMIN") {
+                        isUser = false;
+                    }
                 }
-            }
-            if (isUser) {
-            $("#userTable").addClass("show active");
-            $("#userTab").addClass("show active");
-            } else {
-            $("#adminTable").addClass("show active");
-            $("#adminTab").addClass("show active");
-            }
+                if (isUser) {
+                    $("#userTable").addClass("show active");
+                    $("#userTab").addClass("show active");
+                } else {
+                    $("#adminTable").addClass("show active");
+                    $("#adminTab").addClass("show active");
+                }
             })
         })
 }

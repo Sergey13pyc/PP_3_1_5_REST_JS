@@ -1,5 +1,5 @@
 async function createUser() {
-    $('#addUser').click(async () =>  {
+    $('#addUser').click(async () => {
         let addUserForm = $('#addForm')
         let username = addUserForm.find('#usernameCreate').val().trim();
         let password = addUserForm.find('#passwordCreate').val().trim();

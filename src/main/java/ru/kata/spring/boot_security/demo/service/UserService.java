@@ -20,7 +20,5 @@ public interface UserService {
 
     void addDefaultUser();
 
-    void update(User user);
-
     User passwordCoder(User user);
 }
