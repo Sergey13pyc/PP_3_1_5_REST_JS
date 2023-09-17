@@ -16,11 +16,9 @@ import java.util.List;
 public class AdminRestController {
 
     private final UserService userService;
-    private final RoleService roleService;
 
     public AdminRestController(RoleService roleService, UserService userService) {
         this.userService = userService;
-        this.roleService = roleService;
     }
 
     @GetMapping()
